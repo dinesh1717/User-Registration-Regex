@@ -57,5 +57,21 @@ public class UserRegistration {
 
         }
     }
+      //UC4
+      // Adding user's contact number
+
+    public void contactNumber() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter contact number with country code :: " );
+        String ContactNumber = scanner.nextLine();
+        boolean answer = Pattern.matches("91?[0-9]{10}",ContactNumber);
+        if (answer){
+            System.out.println("Thank you");
+        }else {
+            System.out.println("enter valid contact number");
+        }
+
+    }
+
 }
 
