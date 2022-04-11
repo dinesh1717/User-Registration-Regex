@@ -42,6 +42,20 @@ public class UserRegistration {
         }
 
     }
-    }
+    //UC3
+    // Adding user's Email Address
 
+    public void email() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter email ID :: ");
+        String email = scanner.next();
+        Boolean answer = Pattern.matches("^[a-zA-Z0-9+_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$", email);
+        if (answer) {
+            System.out.println("thank you");
+        } else {
+            System.out.println("please enter valid email ID ");
+
+        }
+    }
+}
 
