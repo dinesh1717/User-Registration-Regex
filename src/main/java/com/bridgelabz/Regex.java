@@ -10,6 +10,8 @@ public class Regex {
         userRegistration.email();
         userRegistration.contactNumber();
         userRegistration.passwordEightDigit();
+        userRegistration.passwordOneUpperCase();
+
 
     }
 

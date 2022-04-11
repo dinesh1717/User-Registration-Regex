@@ -85,5 +85,19 @@ public class UserRegistration {
             System.out.println("enter valid password");
         }
     }
+     //UC6
+     // minimum 8 character and atleast 1 upper case
+    public void passwordOneUpperCase() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter password  :: " );
+        String password = scanner.nextLine();
+        boolean answer = Pattern.matches("[A-Z]+[a-z]{7,}",password);
+        if (answer){
+            System.out.println("Thank you");
+        }else {
+            System.out.println("enter valid password");
+        }
     }
+}
+
 
