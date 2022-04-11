@@ -72,6 +72,18 @@ public class UserRegistration {
         }
 
     }
-
-}
+     //UC5
+    // minimum 8 character should be added
+    public void passwordEightDigit() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter password  :: " );
+        String password = scanner.nextLine();
+        boolean answer = Pattern.matches("[a-zA-Z0-9]{8,}",password);
+        if (answer){
+            System.out.println("Thank you");
+        }else {
+            System.out.println("enter valid password");
+        }
+    }
+    }
 
