@@ -57,44 +57,61 @@ public class UserRegistration {
 
         }
     }
-      //UC4
-      // Adding user's contact number
+    //UC4
+    // Adding user's contact number
 
     public void contactNumber() {
         scanner = new Scanner(System.in);
-        System.out.print("Enter contact number with country code :: " );
+        System.out.print("Enter contact number with country code :: ");
         String ContactNumber = scanner.nextLine();
-        boolean answer = Pattern.matches("91?[0-9]{10}",ContactNumber);
-        if (answer){
+        boolean answer = Pattern.matches("91?[0-9]{10}", ContactNumber);
+        if (answer) {
             System.out.println("Thank you");
-        }else {
+        } else {
             System.out.println("enter valid contact number");
         }
 
     }
-     //UC5
+
+    //UC5
     // minimum 8 character should be added
     public void passwordEightDigit() {
         scanner = new Scanner(System.in);
-        System.out.print("Enter password  :: " );
+        System.out.print("Enter password  :: ");
         String password = scanner.nextLine();
-        boolean answer = Pattern.matches("[a-zA-Z0-9]{8,}",password);
-        if (answer){
+        boolean answer = Pattern.matches("[a-zA-Z0-9]{8,}", password);
+        if (answer) {
             System.out.println("Thank you");
-        }else {
+        } else {
             System.out.println("enter valid password");
         }
     }
-     //UC6
-     // minimum 8 character and atleast 1 upper case
+
+    //UC6
+    // minimum 8 character and atleast 1 upper case
     public void passwordOneUpperCase() {
         scanner = new Scanner(System.in);
-        System.out.print("Enter password  :: " );
+        System.out.print("Enter password  :: ");
         String password = scanner.nextLine();
-        boolean answer = Pattern.matches("[A-Z]+[a-z]{7,}",password);
-        if (answer){
+        boolean answer = Pattern.matches("[A-Z]+[a-z]{7,}", password);
+        if (answer) {
             System.out.println("Thank you");
-        }else {
+        } else {
+            System.out.println("enter valid password");
+        }
+    }
+
+
+     //UC7
+     // minimum 8 character and 1 upper case and at least 1 number should be added
+    public void passwordOneNum() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter password  :: ");
+        String password = scanner.nextLine();
+        boolean answer = Pattern.matches("[A-Za-z0-9]{8,}", password);
+        if (answer) {
+            System.out.println("Thank you");
+        } else {
             System.out.println("enter valid password");
         }
     }
