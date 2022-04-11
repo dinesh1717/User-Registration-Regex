@@ -115,6 +115,19 @@ public class UserRegistration {
             System.out.println("enter valid password");
         }
     }
+     // UC8
+     // atleast 1 special character should be added
+    public void passwordOneSpecialCharacter() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter password  :: " );
+        String password = scanner.nextLine();
+        boolean answer = Pattern.matches("[A-Za-z0-9]{8,}+[!@#$%^&*+-|'~`,<>.?_]{1}",password);
+        if (answer){
+            System.out.println("Thank you");
+        }else {
+            System.out.println("enter valid password");
+        }
+    }
 }
 
 
