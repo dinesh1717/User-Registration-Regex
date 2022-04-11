@@ -25,6 +25,23 @@ public class UserRegistration {
             System.out.println("please enter valid first name ");
         }
 
+        //UC2
+        // Adding Last Name
+
+    }
+
+    public void lastName() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter Last Name :: ");
+        String LastName = scanner.next();
+        Boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", LastName);
+        if (answer) {
+            System.out.println("thank you");
+        } else {
+            System.out.println("please enter valid last name ");
+        }
+
     }
     }
+
 
