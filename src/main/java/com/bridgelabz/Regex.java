@@ -13,8 +13,7 @@ public class Regex {
         userRegistration.passwordOneUpperCase();
         userRegistration.passwordOneNum();
         userRegistration.passwordOneSpecialCharacter();
-
-
+        userRegistration.emailValidation();
 
     }
 

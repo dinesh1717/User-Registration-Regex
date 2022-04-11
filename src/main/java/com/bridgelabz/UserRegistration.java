@@ -102,8 +102,8 @@ public class UserRegistration {
     }
 
 
-     //UC7
-     // minimum 8 character and 1 upper case and at least 1 number should be added
+    //UC7
+    // minimum 8 character and 1 upper case and at least 1 number should be added
     public void passwordOneNum() {
         scanner = new Scanner(System.in);
         System.out.print("Enter password  :: ");
@@ -115,19 +115,36 @@ public class UserRegistration {
             System.out.println("enter valid password");
         }
     }
-     // UC8
-     // atleast 1 special character should be added
+
+    // UC8
+    // atleast 1 special character should be added
     public void passwordOneSpecialCharacter() {
         scanner = new Scanner(System.in);
-        System.out.print("Enter password  :: " );
+        System.out.print("Enter password  :: ");
         String password = scanner.nextLine();
-        boolean answer = Pattern.matches("[A-Za-z0-9]{8,}+[!@#$%^&*+-|'~`,<>.?_]{1}",password);
-        if (answer){
+        boolean answer = Pattern.matches("[A-Za-z0-9]{8,}+[!@#$%^&*+-|'~`,<>.?_]{1}", password);
+        if (answer) {
             System.out.println("Thank you");
-        }else {
+        } else {
             System.out.println("enter valid password");
         }
     }
-}
+
+    //UC9
+    // validate the given email Ids in sheet
+    public void emailValidation() {
+
+            scanner = new Scanner(System.in);
+            System.out.print("Enter email ID :: ");
+            String Email = scanner.next();
+            boolean answer = Pattern.matches("[a-zA-Z0-9_.]*[-]*[+]*[a-zA-Z0-9]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+", Email);
+            if (answer) {
+                System.out.println("Thank you");
+            } else {
+                System.out.println("enter valid password");
+            }
+        }
+    }
+
 
 
